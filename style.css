@@ -1,0 +1,61 @@
+.score_lives {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.win_lose {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: stretch;
+    grid-row-gap: 30px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.moleMan {
+    overflow: hidden;
+}
+
+.hills {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 25% 25% 25% 25%;
+    top: 39%;
+    grid-row-gap: 30px;
+    height: 100%;
+}
+
+.imgStyle {
+    position: relative;
+    width: 300px;
+    animation-name: moleMove;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#moleImg {
+    width: 350px;
+    height: 35%;
+}
+
+@keyframes moleMove {
+    0%   {top: 300px;}
+    50%  {top: 0px;}
+    100% {top: 300px;}
+}
+
+@keyframes moleDie {
+    0% {top: 0px;}
+    100% {top: -700px}
+}
